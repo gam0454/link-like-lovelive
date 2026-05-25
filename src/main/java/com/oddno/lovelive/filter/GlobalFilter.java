@@ -31,7 +31,7 @@ public class GlobalFilter extends OncePerRequestFilter {
 			if (clientVersion.equals("2.4.50"))
 				responseWrapper.setHeader("x-res-version", "R2503400@ECHJFDbTeckkEeJ87vNcYZCeQA==");
 			else
-				responseWrapper.setHeader("x-res-version", "R2605000@gXmXdnFujzVDRQT7ZEhv++D6YA==");
+				responseWrapper.setHeader("x-res-version", "R2605003@3D4SGiaPEFErqNIto7oqleD6YA==");
 
 			String serverDate = java.time.format.DateTimeFormatter.RFC_1123_DATE_TIME
 					.format(java.time.ZonedDateTime.now(java.time.ZoneId.of("GMT")));
