@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.oddno.lovelive.dto.request.GetCharacterInfoRequest;
 import com.oddno.lovelive.dto.response.GetCharacterInfoResponse;
+import com.oddno.lovelive.dto.response.GetGallaryListResponse;
 import com.oddno.lovelive.service.CollectionService;
 
 @RestController
@@ -16,7 +17,12 @@ public class CollectionController {
 
 	@Autowired
 	private CollectionService service;
-	
+
+	@PostMapping("/get_gallary_list")
+	public GetGallaryListResponse getGallaryList() {
+		return service.getGallaryList();
+	}
+
 	@PostMapping("/get_character_info")
 	public GetCharacterInfoResponse getCharacterInfo(@RequestBody GetCharacterInfoRequest request) {
 		return service.getCharacterInfo(request);

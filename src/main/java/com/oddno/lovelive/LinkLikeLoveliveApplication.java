@@ -7,14 +7,17 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import com.oddno.lovelive.gamedata.adv.AdvFactory;
 import com.oddno.lovelive.gamedata.archive.ArchiveFactory;
 import com.oddno.lovelive.gamedata.card.CardFactory;
+import com.oddno.lovelive.gamedata.comics.ComicsFactory;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class LinkLikeLoveliveApplication {
 
 	public static void main(String[] args) {
 		AdvFactory.loadData();
-		CardFactory.loadData();
 		ArchiveFactory.loadData();
+		CardFactory.loadData();
+		ComicsFactory.loadData();
+		
 		SpringApplication.run(LinkLikeLoveliveApplication.class, args);
 	}
 
