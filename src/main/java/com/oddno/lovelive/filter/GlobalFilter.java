@@ -28,10 +28,14 @@ public class GlobalFilter extends OncePerRequestFilter {
 			
 			responseWrapper.setHeader("server", "Google Frontend");
 
-			if (clientVersion.equals("2.4.50"))
+			if (clientVersion.equals("1.11.0"))
+				responseWrapper.setHeader("x-res-version", "R2403040@C8B3mT7Er6t6BOg7fPu69LDkIg==");
+			else if (clientVersion.equals("2.0.0"))
+				responseWrapper.setHeader("x-res-version", "R2404010@N9hKcuYDzZDF29RN0dCvG/CXKg==");
+			else if (clientVersion.equals("2.4.50"))
 				responseWrapper.setHeader("x-res-version", "R2503400@ECHJFDbTeckkEeJ87vNcYZCeQA==");
 			else
-				responseWrapper.setHeader("x-res-version", "R2605003@3D4SGiaPEFErqNIto7oqleD6YA==");
+				responseWrapper.setHeader("x-res-version", "R2606000@Naj2zWaQXy5bAH5X8TF9RZDUYQ==");
 
 			String serverDate = java.time.format.DateTimeFormatter.RFC_1123_DATE_TIME
 					.format(java.time.ZonedDateTime.now(java.time.ZoneId.of("GMT")));
