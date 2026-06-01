@@ -30,6 +30,9 @@ public class LiveInfo {
 	@JsonProperty("name")
 	private String name;
 
+	@JsonProperty("archive_no")
+	private long archiveNo; // v1.11.0
+
 	@JsonProperty("description")
 	private String description;
 
@@ -73,12 +76,21 @@ public class LiveInfo {
 
 	@JsonProperty("thumbnail_image_url")
 	private String thumbnailImageUrl;
+	
+	@JsonProperty("asset_bundle")
+	private String assetBundle; // v1.11.0
+	
+	@JsonProperty("resource_file_name")
+	private String resourceFileName; // v1.11.0
 
 	@JsonProperty("ticket_rank")
 	private LiveTicketRank ticketRank;
 
 	@JsonProperty("character_list")
 	private List<LiveInfoCharacterListInner> characterList;
+	
+	@JsonProperty("is_watched")
+	private boolean isWatched; // v1.11.0
 
 	@JsonProperty("total_playing_time_second")
 	private int totalPlayingTimeSecond;
@@ -95,6 +107,9 @@ public class LiveInfo {
 	@JsonProperty("has_extra_admission")
 	private boolean hasExtraAdmission;
 
+	@JsonProperty("extra_admission_threshold")
+	private int extraAdmissionThreshold; // v1.11.0
+
 	@JsonProperty("earned_star_count")
 	private int earnedStarCount;
 
@@ -103,6 +118,12 @@ public class LiveInfo {
 
 	@JsonProperty("video_url")
 	private String videoUrl;
+
+	@JsonProperty("archive_video_size")
+	private String archiveVideoSize; // v1.11.0
+
+	@JsonProperty("archive_video_size_formatted")
+	private String archiveVideoSizeFormatted; // v1.11.0
 
 	@JsonProperty("archive_video_size_in_byte")
 	private long archiveVideoSizeInByte;

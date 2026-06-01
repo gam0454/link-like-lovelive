@@ -32,6 +32,9 @@ public class GetFesArchiveDataResponse {
     @JsonProperty("costume_ids")
     private List<Integer> costumeIds;
 
+    @JsonProperty("live_timeline_ids")
+    private List<Integer> liveTimelineIds; // v1.11.0
+
     @JsonProperty("timeline_ids")
     private List<Long> timelineIds;
 
@@ -82,6 +85,9 @@ public class GetFesArchiveDataResponse {
 
     @JsonProperty("total_gift_pt")
     private String totalGiftPt;
+
+    @JsonProperty("character_ids")
+    private List<Integer> characterIds; // v1.11.0
 
     @JsonProperty("characters")
     private List<LiveArchiveCharacter> characters;

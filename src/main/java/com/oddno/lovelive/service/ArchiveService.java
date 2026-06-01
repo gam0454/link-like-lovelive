@@ -166,6 +166,7 @@ public class ArchiveService {
 				.giftPtRankings(new ArrayList<>())
 				.liveLocationId(archive.getLiveLocationId())
 				.costumeIds(archive.getCostumes())
+				.liveTimelineIds(new ArrayList<>())
 				.timelineIds(new ArrayList<>())
 				//				.timelineIds(archive.getTimelines())
 				.archiveUrl(archive.getExternalLink())
@@ -184,6 +185,7 @@ public class ArchiveService {
 				.userGiftPt(0)
 				.userGiftPtRanking(0)
 				.totalGiftPt(null)
+				.characterIds(new ArrayList<>())
 				.characters(LiveArchiveCharacter.fromDtos(archive.getCharacterList()))
 				.enquetes(new ArrayList<>())
 				.selectableCameraTypes(List.of(LiveCameraType.LIVE_CAMERA_TYPE_DYNAMIC_VIEW,
